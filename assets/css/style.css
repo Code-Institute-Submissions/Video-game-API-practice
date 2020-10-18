@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+/* general ----------------------------------------*/
+.no-padding{
+    padding: 0px;
+}
+.no-margins{
+    margin: 0px;
+}
+h5 {
+    padding-top: 10px;
+}
+img {
+    padding-top: 15px;
+}
+
+/* background colors */
+body{
+    background-color: #171717;
+}
+.dark-grey{
+    background-color: #333333;
+}
+/* fonts */
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: #fafafa;
+}
+.green-txt{
+    color: #00ff19;
+}
+
+/* index.html-------------------------------------------- */
+
+.thumbnails {
+    height: 200px;
+    width: 330px;
+}
+
+.jumbo-button {
+    margin-top: 15px;
+}
+#gamediv {
+    max-width: 360px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* footer -------------------------------------------------*/
+.social-links {
+    font-size: 1.5em;
+}
+
+/* media queries-------------------------------------------- */
+@media only screen and (min-width: 400px)  {
+
+#gamediv {
+    max-width: 100%;
+}
+#gamediv img {
+    max-width: 400px;
+}
+}
