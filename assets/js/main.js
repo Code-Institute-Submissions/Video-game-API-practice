@@ -33,15 +33,19 @@ function getGames(searchText) {
         $.each(gamesResults, (key, game) => {
             console.log(key, game);
             output += `
-            <div class="col-md-4 no-padding">
+            <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
                     <img class="thumbnails" src="${game.background_image}">
                     <h5>${game.name}</h5>
                     <p>Metacritic score - ${game.metacritic}</p>
+                    <a onclick="gameSelected('${game.id}')" class="btn btn-success href="#">Game Details</a>
                 </div>
             </div>`
+            
         });
         document.getElementById("gamediv").innerHTML = output;
+
+
     })
 
     .catch((err)  => {
