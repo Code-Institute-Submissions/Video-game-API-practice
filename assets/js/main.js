@@ -76,30 +76,82 @@ function getGame() {
     $.ajax(settings).done(function (response) {
         console.log(response);
 
+// create game dev name array 
+
         let selectedGame = response;
         let gameDevs = selectedGame.developers;
-        console.log(gameDevs);
         let devNameArray = [];
         gameDevs.forEach(function (devs) {
            
             let devNames = devs.name;
-            console.log(devNames);
             devNameArray.push(devNames);
-            console.log(`ARRAY: ${devNameArray}`);
         });
 
+        console.log(`ARRAY + ${devNameArray}`);
+
+// create ratings count array
+
+        let gameRatings = selectedGame.ratings;
+        let ratingsObj = [];
+        
+        gameRatings.forEach(function (rate) {
+           
+            let ratingCount = rate.count;
+            ratingsObj.push(ratingCount);
+            ratingsArray = Object.values(ratingsObj);
+        });
+
+        console.log(`ARRAY + ${ratingsArray}`);
+        console.log(ratingsArray);
+        
+
+// add  chart
+var ctx = document.getElementById('chart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Exceptional', 'Recommended', 'Skip', 'Meh'],
+        datasets: [{
+            label: '# of Votes',
+            data: ratingsArray,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)' 
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+// record game info to output variable
+
         let output = `
-            <div class="col-lg-4 col-md-6 no-padding">
-                <div class="text-center">
-                    <img class="thumbnails" src="${selectedGame.background_image}">
-                    <h5>${selectedGame.name}</h5>
-                    <div>Description - ${selectedGame.description}</div>
-                    <div>Developers - <p>${devNameArray}</p></div>
+            <div class="no-padding">
+                <div class="text-center game-width">
+                    <img class="game-image" src="${selectedGame.background_image}">
+                    <h2>${selectedGame.name}</h2>
+                    <p>Description - ${selectedGame.description}</p>
+                    <p>Developers - ${devNameArray}</p>
                     <p>Released - ${selectedGame.released}</p>
-                    <p>Metacritic score - ${selectedGame.metacritic}</p>
-                    <p>ratings - ${selectedGame.ratings}</p>
-                    <a href="${selectedGame.website}" target=_blank>Official Website</a><br>
-                    <a onclick="gameSelected('${selectedGame.website}')" class="btn btn-success href="#">Screenshots</a>
+                    <p>Metacritic score - ${selectedGame.metacritic}</p>                  
                 </div>
             </div>`
         document.getElementById("selected-div").innerHTML = output;

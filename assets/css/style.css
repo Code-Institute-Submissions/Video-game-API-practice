@@ -13,6 +13,12 @@ h5 {
 img {
     padding-top: 15px;
 }
+p {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
 
 /* background colors */
 body{
@@ -43,6 +49,13 @@ body {
     margin-right: 0px;
 }
 
+/* game.html------------------------------------------------- */
+.game-width{
+    width: 100%;
+}
+.game-image{
+    width: 100%;
+}
 /* footer -------------------------------------------------*/
 .social-links {
     font-size: 1.5em;
