@@ -76,72 +76,84 @@ function getGame() {
     $.ajax(settings).done(function (response) {
         console.log(response);
 
-// create game dev name array 
+        // create game dev name array 
 
         let selectedGame = response;
         let gameDevs = selectedGame.developers;
         let devNameArray = [];
         gameDevs.forEach(function (devs) {
-           
+
             let devNames = devs.name;
             devNameArray.push(devNames);
         });
 
         console.log(`ARRAY + ${devNameArray}`);
 
-// create ratings count array
+        // create ratings count array
 
         let gameRatings = selectedGame.ratings;
         let ratingsObj = [];
-        
+
         gameRatings.forEach(function (rate) {
-           
+
             let ratingCount = rate.count;
             ratingsObj.push(ratingCount);
             ratingsArray = Object.values(ratingsObj);
         });
 
-        console.log(`ARRAY + ${ratingsArray}`);
-        console.log(ratingsArray);
-        
+        // create ratings title array
 
-// add  chart
-var ctx = document.getElementById('chart');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Exceptional', 'Recommended', 'Skip', 'Meh'],
-        datasets: [{
-            label: '# of Votes',
-            data: ratingsArray,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)' 
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
+        let gameRatingsTitles = selectedGame.ratings;
+        let rateTitleObj = [];
+
+        gameRatingsTitles.forEach(function (rate2) {
+
+            let ratingTitle = rate2.title;
+            rateTitleObj.push(ratingTitle);
+            rateTitleArray = Object.values(rateTitleObj);
+        });
+
+        console.log(`ARRAY + ${rateTitleArray}`);
+        console.log(rateTitleArray);
+
+
+        // add  chart
+        var ctx = document.getElementById('chart');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: rateTitleArray,
+                datasets: [{
+                    label: '# of Votes',
+                    data: ratingsArray,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
                 }
-            }]
-        }
-    }
-});
+            }
+        });
 
 
-// record game info to output variable
+        // record game info to output variable
 
         let output = `
             <div class="no-padding">

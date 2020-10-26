@@ -27,6 +27,9 @@ body{
 .dark-grey{
     background-color: #333333;
 }
+.darkest-grey{
+    background-color: #0a0a0a
+}
 /* fonts */
 body {
     font-family: 'Orbitron', sans-serif;
@@ -35,6 +38,38 @@ body {
 .green-txt{
     color: #00ff19;
 }
+
+/* navbar--------------------------------------------------- */
+ul{
+    list-style-type: none;
+}
+.menuitem {
+    width:33%;
+    display: inline-block;
+    height: 50px;
+    font-size: 1rem;
+}
+.menuitem:hover{
+    background-color: #00ff19;
+}
+.menuitem a:hover{
+    color: black;
+}
+
+.navcontainer {
+    width: 100%;
+    font-size: 0;
+}
+.menuitem a {
+text-decoration: none;
+color: #00ff19;
+margin-top: 15px;
+display: block;
+height: 100%;
+width: 100%;
+}
+
+
 
 /* index.html-------------------------------------------- */
 .thumbnails {
@@ -48,6 +83,13 @@ body {
     margin-left: 0px;
     margin-right: 0px;
 }
+.find-a-game{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.jumbotron{
+    margin: 0;
+}
 
 /* game.html------------------------------------------------- */
 .game-width{
@@ -55,6 +97,10 @@ body {
 }
 .game-image{
     width: 100%;
+}
+#chart{
+    max-width: 500px;
+    margin: 0 auto;
 }
 /* footer -------------------------------------------------*/
 .social-links {
@@ -77,4 +123,59 @@ body {
     height: 200px;
     width: 330px;
 }  
+}
+/*-------------------------------------------------------------- slider section */
+/* --this sets the max width for the slider */
+.slider-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 0;
+}
+/* --this hides the slider overflow */
+#slider {
+overflow: hidden;
+}
+/* --this styles the slider and sets the animation */
+#slider figure {
+position: relative;
+width: 500%;
+margin: 0;
+left: 0;
+animation: 20s slider infinite;
+height: 200px;
+}
+/* --this sets the width of the slider images as an equal percentage of the total number of images used */
+#slider figure img {
+width: 20%;
+float: left;
+}
+/* --this sets the timing for the slider animation */
+@keyframes slider {
+0% {
+left: 0;
+}
+20% {
+left: 0;
+}
+25% {
+left: -100%;
+}
+45% {
+left: -100%;
+}
+50% {
+left: -200%;
+}
+70% {
+left: -200%;
+}
+75% {
+left: -300%;
+}
+95% {
+left: -300%;
+}
+100% {
+left: -400%;
+}
 }

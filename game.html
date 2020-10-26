@@ -12,19 +12,27 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
 		type="text/css" />
 	<link rel="stylesheet" href="assets/css/style.css">
-	<title>Video Game search</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	<title>VG search</title>
 </head>
 
 <body>
 	<header>
-        <nav class="navbar navbar-default">
-            <div class="container no-padding">
-                <div class="navbar-header">
-                    <a class="navbar-logo green-txt" href="index.html">VG Search</a>
-                </div>
-            </div>        
-        </nav>
+        <nav class="row no-gutters darkest-grey">
+               <div class="col no-padding navcontainer text-center">
+                   <ul id="nav" class="navlist no-margins no-padding">
+                     <li class="menuitem darkest-grey">
+                        <a class="list-link" href="index.html" aria-label="this is a link to the recommended games page">HOME</a>
+                     </li>
+                     <li class="menuitem darkest-grey">
+                        <a href="random.html" aria-label="this is a link to the random games page">RANDOM</a>
+                     </li>
+                     <li class="menuitem darkest-grey">
+                        <a href="about.html" aria-label="this is a link to the about page">ABOUT</a>
+                     </li>
+                    </ul>
+               </div>
+         </nav>
     </header>
 
     <div class="container-fluid no-padding no-margins">
@@ -33,9 +41,6 @@
 
     <canvas id="chart" width="360" height="400"></canvas>
     
-
-
-
 	<footer class="container-fluid">
 		<div class="col">
 			<ul class="list-inline social-links text-center">
