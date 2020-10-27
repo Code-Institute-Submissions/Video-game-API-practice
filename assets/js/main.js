@@ -38,7 +38,7 @@ function getGames(searchText) {
                     <img class="thumbnails" src="${game.background_image}">
                     <h5>${game.name}</h5>
                     <p>Metacritic score - ${game.metacritic}</p>
-                    <a onclick="gameSelected('${game.id}')" class="btn btn-success href="#">Game Details</a>
+                    <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
                 </div>
             </div>`
             document.getElementById("gamediv").innerHTML = output;
