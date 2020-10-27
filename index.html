@@ -22,13 +22,13 @@
                <div class="col no-padding navcontainer text-center">
                    <ul id="nav" class="navlist no-margins no-padding">
                      <li class="menuitem darkest-grey">
-                        <a class="list-link" href="index.html" aria-label="this is a link to the recommended games page">HOME</a>
+                        <a class="list-link" href="index.html" aria-label="this is a link to the recommended games page"><span class="menu-txt">HOME</span></a>
                      </li>
                      <li class="menuitem darkest-grey">
-                        <a href="random.html" aria-label="this is a link to the random games page">RANDOM</a>
+                        <a href="random.html" aria-label="this is a link to the random games page"><span class="menu-txt">RANDOM</span></a>
                      </li>
                      <li class="menuitem darkest-grey">
-                        <a href="about.html" aria-label="this is a link to the about page">ABOUT</a>
+                        <a href="about.html" aria-label="this is a link to the about page"><span class="menu-txt">ABOUT</span></a>
                      </li>
                     </ul>
                </div>
@@ -39,12 +39,16 @@
         <h2>Find your next game!</h2>
     </div>
 
+    <div class="logo-bar text-center">
+        <img class="logo" src="assets/images/VGsearch.png" alt="This is the logo">
+    </div>
+
 	<div class="container-fluid no-padding">
         <div class="jumbotron dark-grey text-center">
             <h3 class="green-txt">Search for any video game!</h3>
             <form id="searchForm">
                 <input type="text" class="formControl" id="searchText" placeholder="Type here!">
-                <input type="submit" class="jumbo-button" value="Submit">
+                <input type="submit" class="jumbo-button" value="Submit" onclick = "sliderHide()">
             </form>
         </div>
     </div>
@@ -68,7 +72,7 @@
          </div>
       </section>
 
-	<footer class="container-fluid darkest-grey">
+	<footer class="container-fluid footer darkest-grey">
 		<div class="col">
 			<ul class="list-inline social-links text-center no-margins">
 				<li class="list-inline-item">
@@ -115,6 +119,11 @@
 		integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
 		crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+         function sliderHide() {
+            document.getElementsByClassName("slider-section").style.visibility = "hidden";
+         }
+      </script>
 
 </body>
 

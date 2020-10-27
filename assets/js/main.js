@@ -158,8 +158,8 @@ function getGame() {
         let output = `
             <div class="no-padding">
                 <div class="text-center game-width">
-                    <img class="game-image" src="${selectedGame.background_image}">
                     <h2>${selectedGame.name}</h2>
+                    <img class="game-image" src="${selectedGame.background_image}">
                     <p>Description - ${selectedGame.description}</p>
                     <p>Developers - ${devNameArray}</p>
                     <p>Released - ${selectedGame.released}</p>
@@ -176,4 +176,5 @@ function getGame() {
             console.log(err);
         });
 }
+
 
