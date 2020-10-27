@@ -195,3 +195,6 @@ left: -300%;
 left: -400%;
 }
 }
+.slider-hide{
+    display: none;
+}
