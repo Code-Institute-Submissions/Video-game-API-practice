@@ -127,8 +127,9 @@ width: 100%;
 }
 
 /* random.html------------------------------------------------- */
-.randomGameDiv{
-    display: inline-block;
+.random-thumbnails{
+    height: 200px;
+    width: 330px;
 }
 
 

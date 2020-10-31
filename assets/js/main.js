@@ -201,7 +201,7 @@ console.log(randomID);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
-                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
                     <h5>${randomGame.name}</h5>
                     <p>Metacritic score - ${randomGame.metacritic}</p>
                     <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
@@ -238,7 +238,7 @@ console.log(randomID);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
-                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
                     <h5>${randomGame.name}</h5>
                     <p>Metacritic score - ${randomGame.metacritic}</p>
                     <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
@@ -275,7 +275,7 @@ console.log(randomID);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
-                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
                     <h5>${randomGame.name}</h5>
                     <p>Metacritic score - ${randomGame.metacritic}</p>
                     <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
