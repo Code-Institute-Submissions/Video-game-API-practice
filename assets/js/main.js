@@ -99,6 +99,7 @@ function getGame() {
             let ratingCount = rate.count;
             ratingsObj.push(ratingCount);
             ratingsArray = Object.values(ratingsObj);
+            console.log(ratingsArray)
         });
 
         // create ratings title array
@@ -177,7 +178,7 @@ function getGame() {
         });
 }
 
-
+// search for a random game based on ID and post it to a div on random.html
 
 function randomGames() {
 
@@ -216,6 +217,9 @@ console.log(randomID);
         });
 }
 
+
+// search for a second random game based on ID and post it to a div on random.html
+
 function randomGames2() {
 
 let randomID = Math.floor(Math.random() * 462141) + 1;
@@ -252,6 +256,8 @@ console.log(randomID);
             console.log(err);
         });
 }
+
+// search for a third random game based on ID and post it to a div on random.html
 
 function randomGames3() {
 

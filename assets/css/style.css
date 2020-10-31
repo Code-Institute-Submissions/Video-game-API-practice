@@ -109,7 +109,7 @@ width: 100%;
     width: 100%;
 }
 .game-image{
-    width: 100%;
+    max-height: 350px;
 }
 #chart{
     max-width: 500px;
