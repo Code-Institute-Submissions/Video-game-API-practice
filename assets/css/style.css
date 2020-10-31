@@ -17,6 +17,7 @@ p {
     width: 95%;
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 1.2em;
 }
 .logo{
@@ -117,6 +118,16 @@ width: 100%;
 .detail-btn{
     margin-bottom: 10px;
 }
+
+/* about.html------------------------------------------------- */
+.arcade-img{
+    max-width: 650px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+
+
 /* footer -------------------------------------------------*/
 .social-links {
     font-size: 1.5em;
