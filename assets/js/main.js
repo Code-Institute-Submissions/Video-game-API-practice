@@ -196,23 +196,19 @@ console.log(randomID);
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        let games = response;
-        let gamesResults = games.results;
+        let randomGame = response;
 
-        let output = '';
-        $.each(gamesResults, (key, game) => {
-            console.log(key, game);
-            output += `
-            <div class="col-lg-4 col-md-6 no-padding">
+        let output =`
+            <div class="no-padding no-margins">
                 <div class="text-center">
-                    <img class="thumbnails" src="${game.background_image}">
-                    <h5>${game.name}</h5>
-                    <p>Metacritic score - ${game.metacritic}</p>
-                    <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
                 </div>
             </div>`
             document.getElementById("randomGamediv").innerHTML = output;
-        });
+
     })
 
         .catch((err) => {
@@ -220,5 +216,78 @@ console.log(randomID);
         });
 }
 
+function randomGames2() {
+
+let randomID = Math.floor(Math.random() * 462141) + 1;
+console.log(randomID);
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games/" + randomID,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let randomGame = response;
+
+        let output =`
+            <div class="no-padding no-margins">
+                <div class="text-center">
+                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("randomGamediv2").innerHTML = output;
+
+    })
+
+        .catch((err) => {
+            console.log(err);
+        });
+}
+
+function randomGames3() {
+
+let randomID = Math.floor(Math.random() * 462141) + 1;
+console.log(randomID);
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games/" + randomID,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let randomGame = response;
+
+        let output =`
+            <div class="no-padding no-margins">
+                <div class="text-center">
+                    <img class="thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("randomGamediv3").innerHTML = output;
+
+    })
+
+        .catch((err) => {
+            console.log(err);
+        });
+}
 
 
