@@ -153,6 +153,12 @@ function getGame() {
             }
         });
 
+        // hides chart if the ratings array contains insufficent data
+        
+        if (ratingsArray.length <= 3) {
+           document.getElementById('chart').style.display='none';
+        }
+
 
         // record game info to output variable
 
@@ -214,6 +220,7 @@ console.log(randomID);
 
         .catch((err) => {
             console.log(err);
+            randomGames();
         });
 }
 
@@ -254,6 +261,7 @@ console.log(randomID);
 
         .catch((err) => {
             console.log(err);
+            randomGames2();
         });
 }
 
@@ -293,6 +301,7 @@ console.log(randomID);
 
         .catch((err) => {
             console.log(err);
+            randomGames3();
         });
 }
 
