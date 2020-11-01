@@ -153,9 +153,9 @@ function getGame() {
             }
         });
 
-        // hides chart if the ratings array contains insufficent data
+        // hides chart if the ratings array contains insufficient data
         
-        if (ratingsArray.length <= 3) {
+        if (ratingsArray.length <= 1) {
            document.getElementById('chart').style.display='none';
         }
 
@@ -188,12 +188,13 @@ function getGame() {
 
 function randomGames() {
 
-let randomID = Math.floor(Math.random() * 462141) + 1;
-console.log(randomID);
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber);
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://rapidapi.p.rapidapi.com/games/" + randomID,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
@@ -203,8 +204,9 @@ console.log(randomID);
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        let randomGame = response;
-
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
@@ -229,12 +231,13 @@ console.log(randomID);
 
 function randomGames2() {
 
-let randomID = Math.floor(Math.random() * 462141) + 1;
-console.log(randomID);
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber);
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://rapidapi.p.rapidapi.com/games/" + randomID,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
@@ -244,8 +247,9 @@ console.log(randomID);
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        let randomGame = response;
-
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
@@ -269,12 +273,13 @@ console.log(randomID);
 
 function randomGames3() {
 
-let randomID = Math.floor(Math.random() * 462141) + 1;
-console.log(randomID);
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber);
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://rapidapi.p.rapidapi.com/games/" + randomID,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
@@ -284,8 +289,9 @@ console.log(randomID);
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        let randomGame = response;
-
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
