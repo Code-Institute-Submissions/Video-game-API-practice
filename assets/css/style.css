@@ -7,6 +7,9 @@
 .no-margins{
     margin: 0px;
 }
+h2{
+    margin-top: 20px;
+}
 h5 {
     padding-top: 10px;
 }
@@ -109,7 +112,7 @@ width: 100%;
     width: 100%;
 }
 .game-image{
-    max-height: 350px;
+    max-height: 450px;
     max-width: 100%;
 }
 #chart{
