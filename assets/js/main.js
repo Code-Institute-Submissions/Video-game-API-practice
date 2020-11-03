@@ -28,6 +28,25 @@ function getGames(searchText) {
         console.log(response);
         let games = response;
         let gamesResults = games.results;
+        var count = games.count
+        var page = 1;
+        var pageLimit = Math.ceil(count/=20);
+
+
+    // code for the next and previous buttons
+    $(".prev-btn").on("click", function(){
+        if (page > 1) {
+            page--;
+            console.log('prev' + page)
+        }
+    });
+
+    $(".next-btn").on("click", function(){
+        if (page < pageLimit) {
+            page++;
+            console.log('next' + page)
+        }
+    });
 
         let output = '';
         $.each(gamesResults, (key, game) => {
