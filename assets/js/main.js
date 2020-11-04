@@ -77,7 +77,7 @@ function getGames(searchText) {
         });
 
         document.getElementById("next-prev").style.display = "inline-block";
-        document.getElementById("next-prev2").style.display = "inline-block";        
+        document.getElementById("next-prev2").style.display = "inline-block";    
 
 }
 
