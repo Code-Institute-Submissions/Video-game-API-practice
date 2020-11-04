@@ -5,9 +5,9 @@ var searchText = '';
 
 $(document).ready(() => {
     $('#searchForm').on('submit', (e) => {
+        console.clear();
         searchText = $('#searchText').val();
         getGames(searchText);
-        changePage(page, searchText);
         e.preventDefault();
     });
 });
@@ -57,7 +57,6 @@ function getGames(searchText) {
 
         let output = '';
         $.each(gamesResults, (key, game) => {
-            console.log(key, game);
             output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
@@ -98,7 +97,6 @@ const settings = {
 
         let output = '';
         $.each(gamesResults, (key, game) => {
-            console.log(key, game);
             output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
@@ -117,8 +115,6 @@ const settings = {
             console.log(err);
         });
 
-        console.log('PAGE' + page);
-        console.log('SEARCHTEXT' + searchText);
 
 }
 
@@ -262,7 +258,6 @@ function randomGames() {
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 let randomNumber2 = Math.floor(Math.random() * 20) + 1;
-console.log(randomNumber);
     const settings = {
         "async": true,
         "crossDomain": true,

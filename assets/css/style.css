@@ -106,6 +106,11 @@ width: 100%;
 .jumbotron{
     margin: 0;
 }
+.nav-btn-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
 
 /* game.html------------------------------------------------- */
 .game-width{
