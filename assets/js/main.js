@@ -12,6 +12,7 @@ $(document).ready(() => {
     });
 });
 
+
 // Retrieves a list of games from the API based on the search text entered and submitted in the search Bar 
 // and post them on the index page. Searches for strings.
 
@@ -19,6 +20,7 @@ $(document).ready(() => {
 
 
 function getGames(searchText) {
+
 
     const settings = {
         "async": true,
@@ -73,7 +75,10 @@ function getGames(searchText) {
         .catch((err) => {
             console.log(err);
         });
-        
+
+        document.getElementById("next-prev").style.display = "inline-block";
+        document.getElementById("next-prev2").style.display = "inline-block";        
+
 }
 
 // function for changing pages
