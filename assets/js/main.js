@@ -383,4 +383,130 @@ console.log(randomNumber);
         });
 }
 
+// search for a fourth random game based on ID and post it to a div on random.html
+
+function randomGames4() {
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
+        let output =`
+            <div class="no-padding no-margins">
+                <div class="text-center">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("randomGamediv4").innerHTML = output;
+
+    })
+
+        .catch((err) => {
+            console.log(err);
+            randomGames();
+        });
+}
+
+
+// search for a fifth random game based on ID and post it to a div on random.html
+
+function randomGames5() {
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber);
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
+        let output =`
+            <div class="no-padding no-margins">
+                <div class="text-center">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("randomGamediv5").innerHTML = output;
+
+    })
+
+        .catch((err) => {
+            console.log(err);
+            randomGames2();
+        });
+}
+
+// search for a sixth random game based on ID and post it to a div on random.html
+
+function randomGames6() {
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber);
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games?dates=1990-01-01,2020-12-31&ordering=-rating&page=" + randomNumber,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let resultsResponse = response;
+        let randomGame = resultsResponse.results[randomNumber2];
+        console.log('game' + randomGame.name);
+        let output =`
+            <div class="no-padding no-margins">
+                <div class="text-center">
+                    <img class="random-thumbnails" src="${randomGame.background_image}">
+                    <h5>${randomGame.name}</h5>
+                    <p>Metacritic score - ${randomGame.metacritic}</p>
+                    <a onclick="gameSelected('${randomGame.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("randomGamediv6").innerHTML = output;
+
+    })
+
+        .catch((err) => {
+            console.log(err);
+            randomGames3();
+        });
+}
+
 
