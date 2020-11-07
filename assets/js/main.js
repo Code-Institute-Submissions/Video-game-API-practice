@@ -162,9 +162,15 @@ function getGame() {
 
         console.log(`ARRAY + ${devNameArray}`);
 
+
+        // code for generating a all the rating based arrays
+        let gameRatings = selectedGame.ratings;
+
+        if (gameRatings.length >= 1) {
+
         // create ratings count array
 
-        let gameRatings = selectedGame.ratings;
+
         let ratingsObj = [];
 
         gameRatings.forEach(function (rate) {
@@ -225,18 +231,17 @@ function getGame() {
                 }
             }
         });
-
-        // hides chart if the ratings array contains insufficient data
-        
-        if (ratingsArray.length <= 1) {
-           document.getElementById('chart').style.display='none';
         }
 
+        // hides the chart if sufficient rating data doesn't exist
+        else {
+            document.getElementById('chart').style.display='none';
+        }
 
         // record game info to output variable
 
         let output = `
-            <div class="no-padding">
+            <div class="no-padding game-width">
                 <div class="text-center game-width">
                     <h2>${selectedGame.name}</h2>
                     <img class="game-image" src="${selectedGame.background_image}">
