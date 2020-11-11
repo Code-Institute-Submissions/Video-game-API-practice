@@ -1,3 +1,5 @@
+// global variables
+
 var page = 1;
 var searchText = '';
 
@@ -25,7 +27,7 @@ function getGames(searchText) {
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://rapidapi.p.rapidapi.com/games?search=" + searchText,
+        "url": "https://rapidapi.p.rapidapi.com/games?page=1&search=" + searchText,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
@@ -38,7 +40,7 @@ function getGames(searchText) {
         let games = response;
         let gamesResults = games.results;
         var count = games.count
-        page = 1;
+        let page = 1;
         var pageLimit = Math.ceil(count/=20);
 
 
@@ -56,6 +58,8 @@ function getGames(searchText) {
             changePage(page, searchText);
         }
     });
+
+    // output for gamediv
 
         let output = '';
         $.each(gamesResults, (key, game) => {
@@ -77,13 +81,14 @@ function getGames(searchText) {
         });
 
         document.getElementById("next-prev").style.display = "inline-block";
-        document.getElementById("next-prev2").style.display = "inline-block";    
+        document.getElementById("next-prev2").style.display = "inline-block";
 
 }
 
 // function for changing pages
 
 function changePage(page, searchText){
+    
 const settings = {
         "async": true,
         "crossDomain": true,
@@ -99,6 +104,8 @@ const settings = {
         console.log(response);
         let games = response;
         let gamesResults = games.results;
+
+        // output for changed page
 
         let output = '';
         $.each(gamesResults, (key, game) => {
@@ -119,6 +126,8 @@ const settings = {
         .catch((err) => {
             console.log(err);
         });
+
+        console.log('SEARCH' + searchText);
 
 
 }
@@ -243,6 +252,7 @@ function getGame() {
         let output = `
             <div class="no-padding game-width">
                 <div class="text-center game-width">
+                    <a onclick="getGames()" class="btn btn-success detail-btn href="#">Back</a>
                     <h2>${selectedGame.name}</h2>
                     <img class="game-image" src="${selectedGame.background_image}">
                     <p>Description - ${selectedGame.description}</p>
@@ -261,6 +271,13 @@ function getGame() {
             console.log(err);
         });
 }
+
+// refreshes the gamediv each time a new search is performed
+
+function searchRefresh() {
+    document.getElementById("gamediv").innerHTML = '';
+}
+
 
 // search for a random game based on ID and post it to a div on random.html
 
@@ -284,6 +301,9 @@ let randomNumber2 = Math.floor(Math.random() * 20) + 1;
         let resultsResponse = response;
         let randomGame = resultsResponse.results[randomNumber2];
         console.log('game' + randomGame.name);
+
+        // output for random games
+        
         let output =`
             <div class="no-padding no-margins">
                 <div class="text-center">
