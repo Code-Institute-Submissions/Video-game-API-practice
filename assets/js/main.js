@@ -1,7 +1,8 @@
 // global variables
-
-var page = 1;
 var searchText = '';
+var count = '';
+var page = 1;
+var pageLimit = '';
 
 // Runs the getGames function when you click the submit button on the search bar taking in searchText as a parameter
 
@@ -23,7 +24,6 @@ $(document).ready(() => {
 
 function getGames(searchText) {
 
-
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -39,25 +39,10 @@ function getGames(searchText) {
         console.log(response);
         let games = response;
         let gamesResults = games.results;
-        var count = games.count
-        let page = 1;
-        var pageLimit = Math.ceil(count/=20);
+        count = games.count
+        page = 1;
+        pageLimit = Math.ceil(count/=20);
 
-
-    // code for the next and previous buttons
-    $(".prev-btn").on("click", function(){
-        if (page > 1) {
-            page--;
-            changePage(page, searchText)
-        }
-    });
-
-    $(".next-btn").on("click", function(){
-        if (page < pageLimit) {
-            page++;
-            changePage(page, searchText);
-        }
-    });
 
     // output for gamediv
 
@@ -82,12 +67,28 @@ function getGames(searchText) {
 
         document.getElementById("next-prev").style.display = "inline-block";
         document.getElementById("next-prev2").style.display = "inline-block";
-
+        
 }
+
+ // code for the next and previous buttons
+    $(".prev-btn").on("click", function(){
+        if (page > 1) {
+            page--;
+            changePage(page, searchText)
+        }
+    });
+
+    $(".next-btn").on("click", function(){
+        if (page < pageLimit) {
+            page++;
+            changePage(page, searchText);
+        }
+    });
 
 // function for changing pages
 
 function changePage(page, searchText){
+
     
 const settings = {
         "async": true,
@@ -128,7 +129,7 @@ const settings = {
         });
 
         console.log('SEARCH' + searchText);
-
+        console.log(page);
 
 }
 
