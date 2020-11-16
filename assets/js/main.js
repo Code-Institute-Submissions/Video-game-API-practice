@@ -261,7 +261,7 @@ function getGame() {
         let output = `
             <div class="no-padding game-width">
                 <div class="text-center game-width">
-                    <a onclick="backFunction()" class="btn btn-success detail-btn href="#">Back</a>
+                    <a onclick="backFunction()" class="back-btn btn btn-success detail-btn href="#">Back</a>
                     <h2>${selectedGame.name}</h2>
                     <img class="game-image" src="${selectedGame.background_image}">
                     <p>Description - ${selectedGame.description}</p>
@@ -284,8 +284,6 @@ function getGame() {
 // refreshes the gamediv each time a new search is performed
 
 function backFunction() {
-    sessionStorage.getItem("search-text", searchText);
-    sessionStorage.getItem("page", page);
     window.location = 'index.html';
     return false;
 

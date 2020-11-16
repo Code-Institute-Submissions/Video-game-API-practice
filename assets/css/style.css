@@ -121,6 +121,9 @@ width: 100%;
 }
 
 /* game.html------------------------------------------------- */
+.back-btn{
+    margin-top: 15px;
+}
 .game-width{
     width: 100%;
 }
