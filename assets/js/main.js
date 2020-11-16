@@ -24,7 +24,7 @@ function getGames(searchText) {
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://rapidapi.p.rapidapi.com/games?page=1&search=" + searchText,
+        "url": "https://rapidapi.p.rapidapi.com/games?page=" + page + "&search=" + searchText,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
@@ -67,12 +67,11 @@ function getGames(searchText) {
         document.getElementById("page-number-top").style.display = "inline-block";
         document.getElementById("page-number-bottom").style.display = "inline-block";
         document.getElementById("next-prev2").style.display = "inline-block";
-        
-}
 
-// displays inital page number
-document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
-document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
+        // displays inital page number
+        document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
+        document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
+}
 
  // code for the next and previous buttons
     $(".prev-btn").on("click", function(){
@@ -93,8 +92,6 @@ document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
         }
     });
 
-
-        console.log('PAGE' + page);
 
 // function for changing pages
 
@@ -146,6 +143,8 @@ const settings = {
 
 function gameSelected(id) {
     sessionStorage.setItem('gameID', id);
+    sessionStorage.setItem("search-text", searchText);
+    sessionStorage.setItem("page", page);
     window.location = 'game.html';
     return false;
 }
@@ -262,7 +261,7 @@ function getGame() {
         let output = `
             <div class="no-padding game-width">
                 <div class="text-center game-width">
-                    <a onclick="getGames()" class="btn btn-success detail-btn href="#">Back</a>
+                    <a onclick="backFunction()" class="btn btn-success detail-btn href="#">Back</a>
                     <h2>${selectedGame.name}</h2>
                     <img class="game-image" src="${selectedGame.background_image}">
                     <p>Description - ${selectedGame.description}</p>
@@ -284,8 +283,12 @@ function getGame() {
 
 // refreshes the gamediv each time a new search is performed
 
-function searchRefresh() {
-    document.getElementById("gamediv").innerHTML = '';
+function backFunction() {
+    sessionStorage.getItem("search-text", searchText);
+    sessionStorage.getItem("page", page);
+    window.location = 'index.html';
+    return false;
+
 }
 
 
@@ -505,7 +508,6 @@ console.log(randomNumber);
 // search for a sixth random game based on ID and post it to a div on random.html
 
 function randomGames6() {
-
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 let randomNumber2 = Math.floor(Math.random() * 20) + 1;
 console.log(randomNumber);
