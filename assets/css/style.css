@@ -115,6 +115,10 @@ width: 100%;
     margin-bottom: 20px;
     display: none;
 }
+.page-number{
+    margin: 5px;
+    font-size: 1.2em;
+}
 
 /* game.html------------------------------------------------- */
 .game-width{

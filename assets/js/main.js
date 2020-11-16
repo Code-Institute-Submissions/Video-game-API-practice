@@ -19,9 +19,6 @@ $(document).ready(() => {
 // Retrieves a list of games from the API based on the search text entered and submitted in the search Bar 
 // and post them on the index page. Searches for strings.
 
-
-
-
 function getGames(searchText) {
 
     const settings = {
@@ -40,7 +37,6 @@ function getGames(searchText) {
         let games = response;
         let gamesResults = games.results;
         count = games.count
-        page = 1;
         pageLimit = Math.ceil(count/=20);
 
 
@@ -65,16 +61,26 @@ function getGames(searchText) {
             console.log(err);
         });
 
+
+        // displays next and previous buttons and page number in a single line
         document.getElementById("next-prev").style.display = "inline-block";
+        document.getElementById("page-number-top").style.display = "inline-block";
+        document.getElementById("page-number-bottom").style.display = "inline-block";
         document.getElementById("next-prev2").style.display = "inline-block";
         
 }
+
+// displays inital page number
+document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
+document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
 
  // code for the next and previous buttons
     $(".prev-btn").on("click", function(){
         if (page > 1) {
             page--;
             changePage(page, searchText)
+            document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
+            document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
         }
     });
 
@@ -82,8 +88,13 @@ function getGames(searchText) {
         if (page < pageLimit) {
             page++;
             changePage(page, searchText);
+            document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
+            document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
         }
     });
+
+
+        console.log('PAGE' + page);
 
 // function for changing pages
 
@@ -128,8 +139,6 @@ const settings = {
             console.log(err);
         });
 
-        console.log('SEARCH' + searchText);
-        console.log(page);
 
 }
 
