@@ -1,43 +1,135 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<p align="center">
+  <img src=https://github.com/joshhunt1991/Video-game-API-practice/blob/e41db221dc31aa202654691f6d79aa9ed1332228/assets/images/VGsearch.png alt="VG Search logo"/>
+</p>
 
-Welcome joshhunt1991,
+# Description
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+*This is a fictitious company*
 
-## Gitpod Reminders
+> VG Search is a video game search website that allows video game enthusiasts to find new games to play. Users can find a game based on a keyword and then retrieve information on that game such as release date, metacritic score and developer names.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+> VG Search allows users to randomly generate 6 games at a time with the aim of finding new gaming experiences that they may not have heard of otherwise.
 
-`python3 -m http.server`
+> Where information is available a chart will be generated that presents a visual representation of the games popularity.
 
-A blue button should appear to click: *Make Public*,
+# Deployment and Demo
 
-Another blue button should appear to click: *Open Browser*.
+Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Chalk-and-Sawdust/).
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Wireframe
 
-A blue button should appear to click: *Make Public*,
+The wireframe was designed using [Balsamiq](https://balsamiq.com/wireframes/) and links to the final version can be found below:
 
-Another blue button should appear to click: *Open Browser*.
+- [Wireframe Final Version](/readmelinks/CHALK-AND-SAWDUST.bmpr)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+# UX
 
-## Updates Since The Instructional Video
+I have opted for a simple retro style design with dark greys and black backgrounds to contrast the bright green logo and text; inspired by old games particularly space invaders.  the site has a loading time of 3.1 seconds.
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+- Home page: Contains a jumbotron with a search bar inside and an automatic image slider containing gaming images. When a keyword is searched the image slider disappears and the page is populated with the relevant games. The image slider is hidden at this point and next and previous page buttons are generated with a page number in between. Each game has a details button to take the user to a seperate page with the information for that game. Everything resizes accordingly depending on user's viewport size.
+- The game page: Contains the game title, an image generated from the api, assorted game details and a chart to display a visual representation of the games popularity. The page also contains a back button to return to the previous page.
+- Random page: Contains 6 randomly generated games from the top 2000 rated games on the API.
+- About page: Contains a write up about the purpose of the website and an image to convey the theme.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+[image of responsive web page in desktop size](/readmelinks/desktop.png) <br/>
+[image of responsive web page in tablet size](/readmelinks/tablet.png) <br/>
+[image of responsive web page in mobile size](/readmelinks/mobile.png) <br/>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Visual Identity
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- [Canva](https://www.canva.com/) for the logo design.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- The color scheme was inspired by the vintage xbox color scheme.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- The general theme was inspired by retro gaming
 
---------
+# User Stories
 
-Happy coding!
+Users:
+
+- As a user, I'd like to find good quality games that are highly rated.
+- As a user, I'd like to get a clear sense of what the website is meant to achieve.
+- As a user, I'd like to be able to search for game series by keyword.
+- As a user, I'd like to quickly find highly rated and popular games at random.
+
+site creator:
+
+- As a site owner, I would like my users to find the site easy to use to retain their interest.
+- As a site owner I would like the theme to clearly represent gaming
+- As a gym owner, I'd like the website to give the user information about the purpose of the site.
+
+# Testing
+
+Website has been tested using [GTmetrix](https://gtmetrix.com/reports/joshhunt1991.github.io/FwfY1qpW) see results below:
+
+[gt metrix test Results](/readmelinks/gtmetrix.pdf)
+
+The points below can be improved with a bit more optimization:
+
+- Image optimization
+- Leveraging browser caching
+
+I tested the modal form to make sure that it opens and submits to the code institute form dump. images below.
+
+[Opening the modal](/readmelinks/modalopen.png) <br/>
+[Making sure fields are required](/readmelinks/required.png) <br/>
+[Submitting to form dump](/readmelinks/formsubmit.png) <br/>
+
+I also tested the contact form. Images below.
+
+[Modal filled out](/readmelinks/form2.png) <br/>
+[Submitted to form dump](/readmelinks/form2submit.png) <br/>
+
+I then decided to test the dropdown navbar. Images below.
+
+[Making sure the dropdown menu opens on click](/readmelinks/ddown.png) <br/>
+[Ensuring that the color change hover effect works](/readmelinks/hover.png) <br/>
+
+# Bugs and issues
+
+- found a bug where the next page function was registering all previous searches and displaying mixed results. I discovered that the position of the code for the next and previous buttons was causing event listener binding. Issue was solved by moving the code.
+
+- Originally the random game function was rarely displaying any good quality games. I looked into this and discovered that this was due to the high number of games in the API and my random games functions were searching the entire list of games. Issue was resolved by only searching from the highest rated 2000 games.
+
+- found a bug where if the API didn't contain sufficient information to populate the chart the whole game page wouldn't display. Bug was fixed by writing an if statement that hides the chart if sufficient data isn't present.
+
+# Scalability
+
+I'd like to have a range of filters on the random games page including genres and release date.
+
+# Technologies
+
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
+- [Charts js](https://www.chartjs.org/)
+
+# Media
+
+I have used different resources for the API images and my logo, I'll list all below:
+
+- [Canva](https://www.canva.com/) for the logo design
+- [Pexels](https://unsplash.com/s/photos/video-game) for the slider images on the index.html page and the image on the about page.
+- [Font Awesome](https://fontawesome.com/6?next=%2Fstart) for the magnifying glass on the search bar
+- [Rapid API](https://rapidapi.com/accujazz/api/rawg-video-games-database/) I used the RawG video games database API which is hosted on Rapid API.
+
+
+# Thanks to
+
+- Font awesome community for developing this great resource
+- Bootstrap crew for developing and maintaining such great library
+- jQuery developers for all the work and great documentation
+- Canva for the great service
+- Rapid API and RawG video games database for the impressive database of video games and information and the well documented platform.
+
+# License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
+
+Copyright 2020 Joshua Connor Hunt.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

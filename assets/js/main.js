@@ -284,8 +284,7 @@ function getGame() {
 // refreshes the gamediv each time a new search is performed
 
 function backFunction() {
-    window.location = 'index.html';
-    return false;
+    window.history.back();
 
 }
 
