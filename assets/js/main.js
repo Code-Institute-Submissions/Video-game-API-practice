@@ -93,6 +93,12 @@ function getGames(searchText) {
         }
     });
 
+    // hides the image slider on index.html when a search is performed
+
+    function sliderHide() {
+            document.getElementById('sliderSection').style.display='none'             
+         }
+
 
 // function for changing pages
 
