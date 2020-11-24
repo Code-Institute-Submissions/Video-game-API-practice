@@ -288,6 +288,70 @@ function backFunction() {
 
 }
 
+// reload games after backFunction() is called 
+
+function reloadGames() { 
+
+    let searchText = sessionStorage.getItem("search-text");
+    let page = sessionStorage.getItem("page");
+
+    if (page && searchText) {
+        
+            const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games?page=" + page + "&search=" + searchText,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let games = response;
+        let gamesResults = games.results;
+        count = games.count
+        pageLimit = Math.ceil(count/=20);
+
+
+    // output for gamediv
+
+        let output = '';
+        $.each(gamesResults, (key, game) => {
+            output += `
+            <div class="col-lg-4 col-md-6 no-padding">
+                <div class="text-center">
+                    <img class="thumbnails" src="${game.background_image}">
+                    <h5>${game.name}</h5>
+                    <p>Metacritic score - ${game.metacritic}</p>
+                    <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("gamediv").innerHTML = output;
+        });
+    })
+
+        .catch((err) => {
+            console.log(err);
+        });
+
+
+        // displays next and previous buttons and page number in a single line
+        document.getElementById("next-prev").style.display = "inline-block";
+        document.getElementById("page-number-top").style.display = "inline-block";
+        document.getElementById("page-number-bottom").style.display = "inline-block";
+        document.getElementById("next-prev2").style.display = "inline-block";
+
+        // displays inital page number
+        document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
+        document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
+}
+        
+        
+    }
+
 
 // search for a random game based on ID and post it to a div on random.html
 
