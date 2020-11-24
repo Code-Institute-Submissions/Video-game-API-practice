@@ -4,6 +4,7 @@ var count = '';
 var page = 1;
 var pageLimit = '';
 
+
 // Runs the getGames function when you click the submit button on the search bar taking in searchText as a parameter
 
 $(document).ready(() => {
@@ -349,7 +350,7 @@ function reloadGames() {
         document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
 }
         
-        
+        sessionStorage.clear();   
     }
 
 
