@@ -22,6 +22,8 @@ $(document).ready(() => {
 
 function getGames(searchText) {
 
+    page = 1;
+
     const settings = {
         "async": true,
         "crossDomain": true,
