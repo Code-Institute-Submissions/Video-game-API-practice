@@ -1,8 +1,9 @@
 // global variables
 var searchText = '';
 var count = '';
-var page = 1;
+var page = sessionStorage.getItem('page');
 var pageLimit = '';
+
 
 
 // Runs the getGames function when you click the submit button on the search bar taking in searchText as a parameter
@@ -11,6 +12,7 @@ $(document).ready(() => {
     $('#searchForm').on('submit', (e) => {
         console.clear();
         searchText = $('#searchText').val();
+        sessionStorage.setItem('searchText', searchText);
         getGames(searchText);
         e.preventDefault();
     });
@@ -80,7 +82,8 @@ function getGames(searchText) {
     $(".prev-btn").on("click", function(){
         if (page > 1) {
             page--;
-            changePage(page, searchText)
+            sessionStorage.setItem("page", page);
+            changePage(page, sessionStorage.getItem(searchText));
             document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
             document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
         }
@@ -89,7 +92,8 @@ function getGames(searchText) {
     $(".next-btn").on("click", function(){
         if (page < pageLimit) {
             page++;
-            changePage(page, searchText);
+            sessionStorage.setItem("page", page);
+            changePage(page, sessionStorage.getItem(searchText));
             document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
             document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
         }
@@ -106,7 +110,11 @@ function getGames(searchText) {
 
 function changePage(page, searchText){
 
-    
+if ('page' in sessionStorage && 'searchText' in sessionStorage) {
+
+    page = sessionStorage.getItem('page');
+    searchText = sessionStorage.getItem('searchText');
+
 const settings = {
         "async": true,
         "crossDomain": true,
@@ -144,7 +152,48 @@ const settings = {
         .catch((err) => {
             console.log(err);
         });
+}
+else {
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://rapidapi.p.rapidapi.com/games?page=" + page + "&search=" + searchText,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "e820b60717mshf9de36d3c2a66b8p16a209jsnbbb441546d84"
+        }
+    };
 
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let games = response;
+        let gamesResults = games.results;
+
+        // output for changed page
+
+        let output = '';
+        $.each(gamesResults, (key, game) => {
+            output += `
+            <div class="col-lg-4 col-md-6 no-padding">
+                <div class="text-center">
+                    <img class="thumbnails" src="${game.background_image}">
+                    <h5>${game.name}</h5>
+                    <p>Metacritic score - ${game.metacritic}</p>
+                    <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
+                </div>
+            </div>`
+            document.getElementById("gamediv").innerHTML = output;
+        });
+    })
+
+
+        .catch((err) => {
+            console.log(err);
+        });
+}
+
+console.log("changepage " + page);
 
 }
 
@@ -152,8 +201,6 @@ const settings = {
 
 function gameSelected(id) {
     sessionStorage.setItem('gameID', id);
-    sessionStorage.setItem("search-text", searchText);
-    sessionStorage.setItem("page", page);
     window.location = 'game.html';
     return false;
 }
@@ -301,10 +348,13 @@ function backFunction() {
 
 function reloadGames() { 
 
-    let searchText = sessionStorage.getItem("search-text");
+    let searchText = sessionStorage.getItem("searchText");
     let page = sessionStorage.getItem("page");
 
     if (page && searchText) {
+
+        let searchText1 = sessionStorage.getItem("searchText");
+        let page1 = sessionStorage.getItem("page");
         
             const settings = {
         "async": true,
@@ -357,8 +407,7 @@ function reloadGames() {
         document.getElementById("page-number-top").innerHTML = `<p>${page}</p>`;
         document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
 }
-        
-        sessionStorage.clear();   
+         
     }
 
 
