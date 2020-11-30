@@ -46,7 +46,6 @@ function getGames(searchText) {
         pageLimit = Math.ceil(count/=20);
 
         if (gamesResults.length == 0) {
-            console.log("fucked");
             document.getElementById("gamediv").innerHTML = errorMessage;
         }
 

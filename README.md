@@ -20,7 +20,7 @@ Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Chalk
 
 The wireframe was designed using [Balsamiq](https://balsamiq.com/wireframes/) and links to the final version can be found below:
 
-- [Wireframe Final Version](/readmelinks/CHALK-AND-SAWDUST.bmpr)
+- [Wireframe Final Version](/readmelinks/VG-search.bmpr)
 
 # UX
 
