@@ -5,7 +5,6 @@ var page = sessionStorage.getItem('page');
 var pageLimit = '';
 
 
-
 // Runs the getGames function when you click the submit button on the search bar taking in searchText as a parameter
 
 $(document).ready(() => {
@@ -41,8 +40,14 @@ function getGames(searchText) {
         console.log(response);
         let games = response;
         let gamesResults = games.results;
+        let errorMessage = `<p>Sorry, No results exist for your chosen search</p>`;
         count = games.count
         pageLimit = Math.ceil(count/=20);
+
+        if (gamesResults.length == 0) {
+            console.log("fucked");
+            document.getElementById("gamediv").innerHTML = errorMessage;
+        }
 
 
     // output for gamediv
@@ -59,6 +64,11 @@ function getGames(searchText) {
                 </div>
             </div>`
             document.getElementById("gamediv").innerHTML = output;
+            
+
+            if (game.background_image == null){
+
+            };
         });
     })
 
