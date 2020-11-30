@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
 /* general ----------------------------------------*/
+/* removes all padding */
 .no-padding{
     padding: 0px;
 }
+/* removes all margins */
 .no-margins{
     margin: 0px;
 }
+/* sets top margin for h2 elements */
 h2{
     margin-top: 20px;
 }
+/* sets top margin for h5 elements */
 h5 {
     padding-top: 10px;
 }
+/* sets top padding for images */
 img {
     padding-top: 15px;
 }
+/* formatting for paragraphs */
 p {
     width: 95%;
     margin: 0 auto;
@@ -23,6 +29,7 @@ p {
     margin-top: 20px;
     font-size: 1.2em;
 }
+/* formatting for logo */
 .logo{
     max-width: 100%;
     max-height: 150px;
@@ -31,12 +38,15 @@ p {
 }
 
 /*colors */
+/* sets color for logo bar */
 .logo-bar{
     background-color: #000000;
 }
+/* sets background color for body */
 body{
     background-color: #171717;
 }
+/* generic class for dark grey background */
 .dark-grey{
     background-color: #333333;
 }
