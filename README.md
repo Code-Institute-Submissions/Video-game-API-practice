@@ -31,9 +31,12 @@ I have opted for a simple retro style design with dark greys and black backgroun
 - Random page: Contains 6 randomly generated games from the top 2000 rated games on the API.
 - About page: Contains a write up about the purpose of the website and an image to convey the theme.
 
-[image of responsive web page in desktop size](/readmelinks/desktop.png) <br/>
-[image of responsive web page in tablet size](/readmelinks/tablet.png) <br/>
-[image of responsive web page in mobile size](/readmelinks/mobile.png) <br/>
+- Below are some images demonstrating the responsiveness of the webpage on different viewport sizes.
+
+- Desktop sizes:
+![image of the homepage](/images/s1.png) <br/>
+![image of the homepage image slider](/images/s2.png) <br/>
+
 
 
 # Visual Identity
