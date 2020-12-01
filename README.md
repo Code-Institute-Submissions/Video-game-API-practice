@@ -36,6 +36,8 @@ I have opted for a simple retro style design with dark greys and black backgroun
 - Desktop sizes: <br/>
 [image of the homepage](/readmelinks/s1.png) <br/>
 [image of the homepage image slider](/readmelinks/s2.png) <br/>
+[image of search results](/readmelinks/s3.png) <br/>
+[image of scrolled down search results](/readmelinks/s4.png) <br/>
 
 
 
