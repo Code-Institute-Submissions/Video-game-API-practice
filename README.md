@@ -34,7 +34,7 @@ I have opted for a simple retro style design with dark greys and black backgroun
 - Below are some images demonstrating the responsiveness of the webpage on different viewport sizes.
 
 - Desktop sizes:
-![image of the homepage](https://imgur.com/2CQ1aKu) <br/>
+![image of the homepage](/readmelinks/s1.png) <br/>
 ![image of the homepage image slider](/images/s2.png) <br/>
 
 
