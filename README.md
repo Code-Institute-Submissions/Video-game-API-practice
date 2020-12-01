@@ -36,8 +36,27 @@ I have opted for a simple retro style design with dark greys and black backgroun
 - Desktop sizes: <br/>
 [image of the homepage](/readmelinks/s1.png) <br/>
 [image of the homepage image slider](/readmelinks/s2.png) <br/>
-[image of search results](/readmelinks/s3.png) <br/>
-[image of scrolled down search results](/readmelinks/s4.png) <br/>
+[image of random games page](/readmelinks/s3.png) <br/>
+[image of search results](/readmelinks/s6.png) <br/>
+[image of the about page](/readmelinks/s5.png) <br/>
+[image of a selected game](/readmelinks/s20.png) <br/>
+[image of a selected game scrolled down to show chart](/readmelinks/s21.png) <br/>
+
+- Tablet sizes: <br/>
+[image of the homepage](/readmelinks/s7.png) <br/>
+[image of search results](/readmelinks/s11.png) <br/>
+[image of the random games page](/readmelinks/s8.png) <br/>
+[image of the about page](/readmelinks/s9.png) <br/>
+
+- Mobile sizes: <br/>
+[image of the homepage](/readmelinks/s13.png) <br/>
+[image of search results](/readmelinks/s14.png) <br/>
+[image of the random games page](/readmelinks/s15.png) <br/>
+[image of a selected game](/readmelinks/s18.png) <br/>
+[image of a selected game showing the chart](/readmelinks/s19.png) <br/>
+
+
+
 
 
 
