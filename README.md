@@ -6,9 +6,9 @@
 
 *This is a fictitious company*
 
-> VG Search is a video game search website that allows video game enthusiasts to find new games to play. Users can find a game based on a keyword and then retrieve information on that game such as release date, metacritic score and developer names.
+> VG Search is a video game search website that allows video game enthusiasts to find new games to play. Users can find a game they have previously heard about based on a keyword and then retrieve information on that game such as release date, metacritic score and developer names.
 
-> VG Search allows users to randomly generate 6 games at a time with the aim of finding new gaming experiences that they may not have heard of otherwise.
+> VG Search allows users to randomly generate 6 games at a time with the aim of finding new gaming experiences that they may not have heard of otherwise. The previously mentioned details of these games can then be found at the click 
 
 > Where information is available a chart will be generated that presents a visual representation of the games popularity.
 
@@ -93,6 +93,8 @@ I then decided to test the dropdown navbar. Images below.
 - Originally the random game function was rarely displaying any good quality games. I looked into this and discovered that this was due to the high number of games in the API and my random games functions were searching the entire list of games. Issue was resolved by only searching from the highest rated 2000 games.
 
 - found a bug where if the API didn't contain sufficient information to populate the chart the whole game page wouldn't display. Bug was fixed by writing an if statement that hides the chart if sufficient data isn't present.
+
+- When clicking the back button the results shown were always for the first page of results regardless of which page was supposed to be presented, this was due to the session storage value for page number being reset to one when the game information page was opened.
 
 # Scalability
 

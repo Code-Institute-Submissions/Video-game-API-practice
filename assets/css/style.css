@@ -1,251 +1,332 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
 /* general ----------------------------------------*/
+
+
 /* removes all padding */
-.no-padding{
-    padding: 0px;
+
+.no-padding {
+	padding: 0px;
 }
+
+
 /* removes all margins */
-.no-margins{
-    margin: 0px;
+
+.no-margins {
+	margin: 0px;
 }
+
+
 /* sets top margin for h2 elements */
-h2{
-    margin-top: 20px;
+
+h2 {
+	margin-top: 20px;
 }
+
+
 /* sets top margin for h5 elements */
+
 h5 {
-    padding-top: 10px;
+	padding-top: 10px;
 }
+
+
 /* sets top padding for images */
+
 img {
-    padding-top: 15px;
+	padding-top: 15px;
 }
+
+
 /* formatting for paragraphs */
+
 p {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-size: 1.2em;
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-size: 1.2em;
 }
+
+
 /* formatting for logo */
-.logo{
-    max-width: 100%;
-    max-height: 150px;
-    position: relative;
-    bottom: 10px;
+
+.logo {
+	max-width: 100%;
+	max-height: 150px;
+	position: relative;
+	bottom: 10px;
 }
+
 
 /*colors */
+
+
 /* sets color for logo bar */
-.logo-bar{
-    background-color: #000000;
-}
-/* sets background color for body */
-body{
-    background-color: #171717;
-}
-/* generic class for dark grey background */
-.dark-grey{
-    background-color: #333333;
-}
-.darkest-grey{
-    background-color: #0a0a0a
-}
-.btn-success{
-    background-color: #00ff19;
-    color: #000000;
-}
-/* fonts */
-body {
-    font-family: 'Orbitron', sans-serif;
-    color: #fafafa;
-}
-.green-txt{
-    color: #00ff19;
+
+.logo-bar {
+	background-color: #000000;
 }
 
+
+/* sets background color for body */
+
+body {
+	background-color: #171717;
+}
+
+
+/* generic class for dark grey background */
+
+.dark-grey {
+	background-color: #333333;
+}
+
+.darkest-grey {
+	background-color: #0a0a0a
+}
+
+.btn-success {
+	background-color: #00ff19;
+	color: #000000;
+}
+
+
+/* fonts */
+
+body {
+	font-family: 'Orbitron', sans-serif;
+	color: #fafafa;
+}
+
+.green-txt {
+	color: #00ff19;
+}
+
+
 /* navbar--------------------------------------------------- */
-ul{
-    list-style-type: none;
+
+ul {
+	list-style-type: none;
 }
+
 .menuitem {
-    width:33%;
-    display: inline-block;
-    height: 50px;
-    font-size: 1rem;
+	width: 33%;
+	display: inline-block;
+	height: 50px;
+	font-size: 1rem;
 }
-.menuitem:hover{
-    background-color: #00ff19;
+
+.menuitem:hover {
+	background-color: #00ff19;
 }
-.menuitem a:hover{
-    color: black;
+
+.menuitem a:hover {
+	color: black;
 }
 
 .navcontainer {
-    width: 100%;
-    font-size: 0;
-}
-.menuitem a {
-text-decoration: none;
-color: #00ff19;
-display: block;
-height: 100%;
-width: 100%;
-}
-.menu-txt{
-    position: relative;
-    top: 10px;
+	width: 100%;
+	font-size: 0;
 }
 
+.menuitem a {
+	text-decoration: none;
+	color: #00ff19;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.menu-txt {
+	position: relative;
+	top: 10px;
+}
 
 
 /* index.html-------------------------------------------- */
+
 .thumbnails {
-    width: 100%;
+	width: 100%;
 }
+
 .jumbo-button {
-    margin-top: 15px;
+	margin-top: 15px;
 }
+
 #gamediv {
-    max-width: 360px;
-    margin-left: 0px;
-    margin-right: 0px;
+	max-width: 360px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
-.find-a-game{
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.find-a-game {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-.jumbotron{
-    margin: 0;
+
+.jumbotron {
+	margin: 0;
 }
-.nav-btn-container{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: none;
+
+.nav-btn-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: none;
 }
-.page-number{
-    margin: 5px;
-    font-size: 1.2em;
+
+.page-number {
+	margin: 5px;
+	font-size: 1.2em;
 }
+
 
 /* game.html------------------------------------------------- */
-.back-btn{
-    margin-top: 15px;
+
+.back-btn {
+	margin-top: 15px;
 }
-.game-width{
-    width: 100%;
+
+.game-width {
+	width: 100%;
 }
-.game-image{
-    max-height: 450px;
-    max-width: 100%;
+
+.game-image {
+	max-height: 450px;
+	max-width: 100%;
 }
-#chart{
-    max-width: 500px;
-    max-height: 350px;
-    margin: 0 auto;
+
+#chart {
+	max-width: 500px;
+	max-height: 350px;
+	margin: 0 auto;
 }
-.detail-btn{
-    margin-bottom: 10px;
-    color: #000000 !important;
+
+.detail-btn {
+	margin-bottom: 10px;
+	color: #000000 !important;
 }
+
 
 /* about.html------------------------------------------------- */
-.arcade-img{
-    max-width: 650px;
-    width: 100%;
-    margin-bottom: 25px;
+
+.arcade-img {
+	max-width: 650px;
+	width: 100%;
+	margin-bottom: 25px;
 }
 
+
 /* random.html------------------------------------------------- */
-.random-thumbnails{
-    height: 200px;
-    width: 330px;
+
+.random-thumbnails {
+	height: 200px;
+	width: 330px;
 }
 
 
 /* footer -------------------------------------------------*/
+
 .social-links {
-    font-size: 1.5em;
-    padding-top: 7px;
+	font-size: 1.5em;
+	padding-top: 7px;
 }
+
 .footer {
-    height: 50px;
+	height: 50px;
 }
+
 
 /* media queries-------------------------------------------- */
-@media only screen and (min-width: 400px)  {
 
-#gamediv {
-    max-width: 100%;
-}
-#gamediv img {
-    max-width: 400px;
-}
+@media only screen and (min-width: 400px) {
+	#gamediv {
+		max-width: 100%;
+	}
+	#gamediv img {
+		max-width: 400px;
+	}
 }
 
-@media only screen and (min-width: 750px)  {
-.thumbnails {
-    height: 200px;
-    width: 330px;
-}  
+@media only screen and (min-width: 750px) {
+	.thumbnails {
+		height: 200px;
+		width: 330px;
+	}
 }
+
+
 /*-------------------------------------------------------------- slider section */
+
+
 /* --this sets the max width for the slider */
+
 .slider-container {
-max-width: 800px;
-margin: 0 auto;
-padding: 0;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0;
 }
+
+
 /* --this hides the slider overflow */
+
 #slider {
-overflow: hidden;
+	overflow: hidden;
 }
+
+
 /* --this styles the slider and sets the animation */
+
 #slider figure {
-position: relative;
-width: 500%;
-margin: 0;
-left: 0;
-animation: 20s slider infinite;
-height: 200px;
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+	height: 200px;
 }
+
+
 /* --this sets the width of the slider images as an equal percentage of the total number of images used */
+
 #slider figure img {
-width: 20%;
-float: left;
+	width: 20%;
+	float: left;
 }
+
+
 /* --this sets the timing for the slider animation */
+
 @keyframes slider {
-0% {
-left: 0;
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
 }
-20% {
-left: 0;
-}
-25% {
-left: -100%;
-}
-45% {
-left: -100%;
-}
-50% {
-left: -200%;
-}
-70% {
-left: -200%;
-}
-75% {
-left: -300%;
-}
-95% {
-left: -300%;
-}
-100% {
-left: -400%;
-}
-}
-.slider-hide{
-    display: none;
+
+.slider-hide {
+	display: none;
 }

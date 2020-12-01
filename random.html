@@ -1,139 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- meta tags -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-		type="text/css" />
-    <!-- font awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
-    <!-- hover effects -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-		type="text/css" />
-    <!-- css stylesheet -->
-	<link rel="stylesheet" href="assets/css/style.css">
-    <!-- chart.js -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <!-- title -->
-	<title>VG search</title>
-</head>
-
-<body>
-	<header>
-        <!-- navbar -->
-		<nav class="row no-gutters darkest-grey">
-			<div class="col no-padding navcontainer text-center">
-				<ul id="nav" class="navlist no-margins no-padding">
-					<li class="menuitem darkest-grey">
-						<a class="list-link" href="index.html"
-							aria-label="this is a link to the recommended games page"><span class="menu-txt">HOME</span></a>
-					</li>
-					<li class="menuitem darkest-grey">
-						<a href="random.html"
-							aria-label="this is a link to the random games page"><span class="menu-txt">RANDOM</span></a>
-					</li>
-					<li class="menuitem darkest-grey">
-						<a href="about.html"
-							aria-label="this is a link to the about page"><span class="menu-txt">ABOUT</span></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-
-    <!-- find a game header bar -->
-	<div class="container-fluid find-a-game text-center">
-		<h2>Randomly selected games!</h2>
-	</div>
-    <!-- logo bar -->
-	<div class="logo-bar text-center">
-		<img class="logo" src="assets/images/VGsearch.png" alt="This is the logo">
-    </div>
-
-        <!-- random games container -->
-		<div class="container-fluid no-padding">
-			<div class="row">
-			<div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv"></div>
-			<div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv2"></div>
-			<div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv3"></div>
-            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv4"></div>
-			<div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv5"></div>
-			<div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv6"></div>
+   <head>
+      <!-- meta tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+         type="text/css" />
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+         type="text/css" />
+      <!-- hover effects -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+         type="text/css" />
+      <!-- css stylesheet -->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+      <!-- title -->
+      <title>VG search</title>
+   </head>
+   <body>
+      <header>
+         <!-- navbar -->
+         <nav class="row no-gutters darkest-grey">
+            <div class="col no-padding navcontainer text-center">
+               <ul id="nav" class="navlist no-margins no-padding">
+                  <li class="menuitem darkest-grey">
+                     <a class="list-link" href="index.html"
+                        aria-label="this is a link to the recommended games page"><span class="menu-txt">HOME</span></a>
+                  </li>
+                  <li class="menuitem darkest-grey">
+                     <a href="random.html"
+                        aria-label="this is a link to the random games page"><span class="menu-txt">RANDOM</span></a>
+                  </li>
+                  <li class="menuitem darkest-grey">
+                     <a href="about.html"
+                        aria-label="this is a link to the about page"><span class="menu-txt">ABOUT</span></a>
+                  </li>
+               </ul>
             </div>
-		</div>
-
-        <!-- footer section -->
-		<footer class="container-fluid footer darkest-grey">
-			<div class="col">
-				<ul class="list-inline social-links text-center no-margins">
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-facebook green-txt" aria-hidden="true"></i>
-							<span class="sr-only">Facebook</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-twitter green-txt" aria-hidden="true"></i>
-							<span class="sr-only">Twitter</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-linkedin green-txt" aria-hidden="true"></i>
-							<span class="sr-only">LinkedIn</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-pinterest green-txt" aria-hidden="true"></i>
-							<span class="sr-only">Pinterest</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-instagram green-txt" aria-hidden="true"></i>
-							<span class="sr-only">Instagram</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="#">
-							<i class="fa fa-youtube green-txt" aria-hidden="true"></i>
-							<span class="sr-only">YouTube</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
-			integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
-			crossorigin="anonymous"></script>
-		<script type="text/javascript" src="assets/js/main.js"></script>
-		<script>
-			randomGames()
-		</script>
-		<script>
-			randomGames2()
-		</script>
-		<script>
-			randomGames3()
-		</script>
-        <script>
-			randomGames4()
-		</script>
-		<script>
-			randomGames5()
-		</script>
-		<script>
-			randomGames6()
-		</script>
-
-</body>
-
+         </nav>
+      </header>
+      <!-- find a game header bar -->
+      <div class="container-fluid find-a-game text-center">
+         <h2>Randomly selected games!</h2>
+      </div>
+      <!-- logo bar -->
+      <div class="logo-bar text-center">
+         <img class="logo" src="assets/images/VGsearch.png" alt="This is the logo">
+      </div>
+      <!-- random games container -->
+      <div class="container-fluid no-padding">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv"></div>
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv2"></div>
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv3"></div>
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv4"></div>
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv5"></div>
+            <div class="col-lg-4 col-md-6 gamediv no-padding" id="randomGamediv6"></div>
+         </div>
+      </div>
+      <!-- footer section -->
+      <footer class="container-fluid footer darkest-grey">
+         <div class="col">
+            <ul class="list-inline social-links text-center no-margins">
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-facebook green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-twitter green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-linkedin green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-pinterest green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Pinterest</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-instagram green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-youtube green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">YouTube</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+         integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+      <script>
+         randomGames()
+      </script>
+      <script>
+         randomGames2()
+      </script>
+      <script>
+         randomGames3()
+      </script>
+      <script>
+         randomGames4()
+      </script>
+      <script>
+         randomGames5()
+      </script>
+      <script>
+         randomGames6()
+      </script>
+   </body>
 </html>

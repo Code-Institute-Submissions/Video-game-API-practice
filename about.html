@@ -1,116 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- meta tags -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-		type="text/css" />
-    <!-- font awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
-    <!-- hover effects -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-		type="text/css" />
-    <!-- css stylesheet -->
-	<link rel="stylesheet" href="assets/css/style.css">
-    <!-- chart.js -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <!-- title -->
-	<title>VG search</title>
-</head>
-
-<body>
-	<header>
-        <!-- navbar -->
-        <nav class="row no-gutters darkest-grey">
-               <div class="col no-padding navcontainer text-center">
-                   <ul id="nav" class="navlist no-margins no-padding">
-                     <li class="menuitem darkest-grey">
-                        <a class="list-link" href="index.html" aria-label="this is a link to the recommended games page"><span class="menu-txt">HOME</span></a>
-                     </li>
-                     <li class="menuitem darkest-grey">
-                        <a href="random.html" aria-label="this is a link to the random games page"><span class="menu-txt">RANDOM</span></a>
-                     </li>
-                     <li class="menuitem darkest-grey">
-                        <a href="about.html" aria-label="this is a link to the about page"><span class="menu-txt">ABOUT</span></a>
-                     </li>
-                    </ul>
-               </div>
+   <head>
+      <!-- meta tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+         type="text/css" />
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+         type="text/css" />
+      <!-- hover effects -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+         type="text/css" />
+      <!-- css stylesheet -->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+      <!-- title -->
+      <title>VG search</title>
+   </head>
+   <body>
+      <header>
+         <!-- navbar -->
+         <nav class="row no-gutters darkest-grey">
+            <div class="col no-padding navcontainer text-center">
+               <ul id="nav" class="navlist no-margins no-padding">
+                  <li class="menuitem darkest-grey">
+                     <a class="list-link" href="index.html" aria-label="this is a link to the recommended games page"><span class="menu-txt">HOME</span></a>
+                  </li>
+                  <li class="menuitem darkest-grey">
+                     <a href="random.html" aria-label="this is a link to the random games page"><span class="menu-txt">RANDOM</span></a>
+                  </li>
+                  <li class="menuitem darkest-grey">
+                     <a href="about.html" aria-label="this is a link to the about page"><span class="menu-txt">ABOUT</span></a>
+                  </li>
+               </ul>
+            </div>
          </nav>
-    </header>
-
-    <!-- find a game header bar -->
-    <div class="container-fluid find-a-game text-center">
-        <h2>About VG Search</h2>
-    </div>
-    <!-- logo bar -->
-    <div class="logo-bar text-center">
-		<img class="logo" src="assets/images/VGsearch.png" alt="This is the logo">
-    </div>
-
-    <!-- about info container -->
-    <div class="container-fluid no-padding text-center">
-        <p>VG Search is an independent website designed to allow gamers to search for new experiences on a variety of gaming platforms. Gamers can search for a game based on a title or keyword and be presented with Metacritic scores and then at a click of a button be provided with details on the selected game and a handy chart showing the level of recommendation for that game. If you are feeling adventurous you can even select a game from a list of randomly generated games!</p>
-    </div>
-
-    <!-- about image container -->
-    <div class="container-fluid no-padding text-center">
-        <img class="arcade-img" src="assets/images/arcade.jpg" alt="This is an image of a gaming arcade">
-    </div>
-
-    <!-- footer section -->
-	<footer class="container-fluid footer darkest-grey">
-		<div class="col">
-			<ul class="list-inline social-links text-center no-margins">
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-facebook green-txt" aria-hidden="true"></i>
-						<span class="sr-only">Facebook</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-twitter green-txt" aria-hidden="true"></i>
-						<span class="sr-only">Twitter</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-linkedin green-txt" aria-hidden="true"></i>
-						<span class="sr-only">LinkedIn</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-pinterest green-txt" aria-hidden="true"></i>
-						<span class="sr-only">Pinterest</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-instagram green-txt" aria-hidden="true"></i>
-						<span class="sr-only">Instagram</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a target="_blank" href="#">
-						<i class="fa fa-youtube green-txt" aria-hidden="true"></i>
-						<span class="sr-only">YouTube</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
-		integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
-		crossorigin="anonymous"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>
-
-</body>
-
+      </header>
+      <!-- find a game header bar -->
+      <div class="container-fluid find-a-game text-center">
+         <h2>About VG Search</h2>
+      </div>
+      <!-- logo bar -->
+      <div class="logo-bar text-center">
+         <img class="logo" src="assets/images/VGsearch.png" alt="This is the logo">
+      </div>
+      <!-- about info container -->
+      <div class="container-fluid no-padding text-center">
+         <p>VG Search is an independent website designed to allow gamers to search for new experiences on a variety of gaming platforms. Gamers can search for a game based on a title or keyword and be presented with Metacritic scores and then at a click of a button be provided with details on the selected game and a handy chart showing the level of recommendation for that game. If you are feeling adventurous you can even select a game from a list of randomly generated games!</p>
+      </div>
+      <!-- about image container -->
+      <div class="container-fluid no-padding text-center">
+         <img class="arcade-img" src="assets/images/arcade.jpg" alt="This is an image of a gaming arcade">
+      </div>
+      <!-- footer section -->
+      <footer class="container-fluid footer darkest-grey">
+         <div class="col">
+            <ul class="list-inline social-links text-center no-margins">
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-facebook green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-twitter green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-linkedin green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-pinterest green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Pinterest</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-instagram green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                  </a>
+               </li>
+               <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fa fa-youtube green-txt" aria-hidden="true"></i>
+                  <span class="sr-only">YouTube</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+         integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+   </body>
 </html>
