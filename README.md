@@ -14,7 +14,7 @@
 
 # Deployment and Demo
 
-Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Chalk-and-Sawdust/).
+Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Video-game-API-practice/index.html).
 
 # Wireframe
 
@@ -80,9 +80,13 @@ site creator:
 
 # Testing
 
-Website has been tested using [GTmetrix](https://gtmetrix.com/reports/joshhunt1991.github.io/FwfY1qpW) see results below:
+Website has been tested using [GTmetrix](https://gtmetrix.com/reports/joshhunt1991.github.io/91nKCZjn/) see results below:
 
-[gt metrix test Results](/readmelinks/gtmetrix.pdf)
+[gt metrix test Results](/readmelinks/GTmetrix.pdf)
+
+- The page has a fully loaded time of 0.5 seconds. I put this down to the simple design which was one of the goals I hoped to achieve.
+- The GT Metrix grade is A, with performance being 97% and the structure 93%.
+- One thing that it recommends to improve is the cumulative layout shift.
 
 I did a simple functionality test to ensure that the website works as intended and evidenced this process below. I was satisfied with the results.
 
