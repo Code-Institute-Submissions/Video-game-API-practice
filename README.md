@@ -20,7 +20,7 @@ Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Chalk
 
 The wireframe was designed using [Balsamiq](https://balsamiq.com/wireframes/) and links to the final version can be found below:
 
-- [Wireframe Final Version](/readmelinks/VG-search.bmpr)
+- [Wireframe Final Version](/readmelinks/VGsearch.bmpr)
 
 # UX
 
@@ -31,7 +31,7 @@ I have opted for a simple retro style design with dark greys and black backgroun
 - Random page: Contains 6 randomly generated games from the top 2000 rated games on the API.
 - About page: Contains a write up about the purpose of the website and an image to convey the theme.
 
-- Below are some images demonstrating the responsiveness of the webpage on different viewport sizes.
+Below are some images demonstrating the responsiveness of the webpage on different viewport sizes.
 
 - Desktop sizes: <br/>
 [image of the homepage](/readmelinks/s1.png) <br/>
@@ -62,7 +62,7 @@ I have opted for a simple retro style design with dark greys and black backgroun
 
 - The color scheme was inspired by the vintage xbox color scheme.
 
-- The general theme was inspired by retro gaming
+- The general theme was inspired by retro gaming for example games like space invaders. I wanted to create a simple and easy to use design and thought that as old games were naturally simple due to the technological limitations that this would be a good place to get inspiration.
 
 # User Stories
 
@@ -84,26 +84,17 @@ Website has been tested using [GTmetrix](https://gtmetrix.com/reports/joshhunt19
 
 [gt metrix test Results](/readmelinks/gtmetrix.pdf)
 
-The points below can be improved with a bit more optimization:
+I did a simple functionality test to ensure that the website works as intended and evidenced this process below. I was satisfied with the results.
 
-- Image optimization
-- Leveraging browser caching
+[First I performed a search using the homepage search bar for the game Super Mario](/readmelinks/smario.png) <br/>
+[Then I tested the next and previous buttons, starting with previous to ensure that as I am starting on page 1 nothing happens. I arrived on page 3](/readmelinks/pagebuttons.png) <br/>
+[Then I clicked on one of these games to bring myself to the game details page](/readmelinks/gamepage.png) <br/>
+[I then used the back button to ensure that I returned to the same page I was previously on](/readmelinks/backbutton.png) <br/>
+[I then performed a second game search to ensure that nothing was broken by performing the previous actions](/readmelinks/secondsearch.png) <br/>
 
-I tested the modal form to make sure that it opens and submits to the code institute form dump. images below.
+[Once these initial checks were done I searched for a nonsense string to test my error message](/readmelinks/nonsense.png) <br/>
 
-[Opening the modal](/readmelinks/modalopen.png) <br/>
-[Making sure fields are required](/readmelinks/required.png) <br/>
-[Submitting to form dump](/readmelinks/formsubmit.png) <br/>
 
-I also tested the contact form. Images below.
-
-[Modal filled out](/readmelinks/form2.png) <br/>
-[Submitted to form dump](/readmelinks/form2submit.png) <br/>
-
-I then decided to test the dropdown navbar. Images below.
-
-[Making sure the dropdown menu opens on click](/readmelinks/ddown.png) <br/>
-[Ensuring that the color change hover effect works](/readmelinks/hover.png) <br/>
 
 # Bugs and issues
 
@@ -117,7 +108,9 @@ I then decided to test the dropdown navbar. Images below.
 
 # Scalability
 
-I'd like to have a range of filters on the random games page including genres and release date.
+- I'd like to have a range of filters on the random games page including genres and release date.
+- I would like to to have the option to filter searches.
+- I'd also like to expand on the home page and include more sections such as "recommended games" or maybe "game of the month".
 
 # Technologies
 
