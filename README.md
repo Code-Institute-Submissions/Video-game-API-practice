@@ -56,10 +56,6 @@ I have opted for a simple retro style design with dark greys and black backgroun
 [image of a selected game showing the chart](/readmelinks/s19.png) <br/>
 
 
-
-
-
-
 # Visual Identity
 
 - [Canva](https://www.canva.com/) for the logo design.
@@ -72,16 +68,15 @@ I have opted for a simple retro style design with dark greys and black backgroun
 
 Users:
 
-- As a user, I'd like to find good quality games that are highly rated.
-- As a user, I'd like to get a clear sense of what the website is meant to achieve.
-- As a user, I'd like to be able to search for game series by keyword.
-- As a user, I'd like to quickly find highly rated and popular games at random.
+- As a user, I'd like to find good quality games that are highly rated, to achieve this I only selected the random games from a pool of the top 2000 most highly rated games. I also give the user ratings and a visual guide of quality in the form of a chart for any and all games where the information is avaiable
+- As a user, I'd like to get a clear sense of what the website is meant to achieve. This was accomplished by creating an "about" page with information about the purpose of the page and also having clear headers and calls to action where necessary.
+- As a user, I'd like to be able to search for game series by keyword. To satisfy this requirement I created a search function that allows users to search by keyword.
+- As a user, I'd like to quickly find highly rated and popular games at random. I achieved this by implementing a randon game page that returns 6 random games from the top 2000 rated games each time the random button is clicked.
 
 site creator:
 
-- As a site owner, I would like my users to find the site easy to use to retain their interest.
-- As a site owner I would like the theme to clearly represent gaming
-- As a gym owner, I'd like the website to give the user information about the purpose of the site.
+- I would like my users to find the site easy to use to retain their interest so I focused on creating a simple, straightforward and self explanatory user interface.
+- I would like the theme to clearly represent gaming therefore I used a retro style theme inspired by space invaders and the original Xbox color scheme. I used colour contrast to make everything stand out.
 
 # Testing
 
