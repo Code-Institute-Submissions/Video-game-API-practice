@@ -117,13 +117,15 @@ I did a simple functionality test to ensure that the website works as intended a
 
 # Bugs and issues
 
-- found a bug where the next page function was registering all previous searches and displaying mixed results. I discovered that the position of the code for the next and previous buttons was causing event listener binding. Issue was solved by moving the code.
+- *SOLVED* found a bug where the next page function was registering all previous searches and displaying mixed results. I discovered that the position of the code for the next and previous buttons was causing event listener binding. Issue was solved by moving the code.
 
-- Originally the random game function was rarely displaying any good quality games. I looked into this and discovered that this was due to the high number of games in the API and my random games functions were searching the entire list of games. Issue was resolved by only searching from the highest rated 2000 games.
+- *SOLVED* Originally the random game function was rarely displaying any good quality games. I looked into this and discovered that this was due to the high number of games in the API and my random games functions were searching the entire list of games. Issue was resolved by only searching from the highest rated 2000 games.
 
-- found a bug where if the API didn't contain sufficient information to populate the chart the whole game page wouldn't display. Bug was fixed by writing an if statement that hides the chart if sufficient data isn't present.
+- *SOLVED* found a bug where if the API didn't contain sufficient information to populate the chart the whole game page wouldn't display. Bug was fixed by writing an if statement that hides the chart if sufficient data isn't present.
 
-- When clicking the back button the results shown were always for the first page of results regardless of which page was supposed to be presented, this was due to the session storage value for page number being reset to one when the game information page was opened.
+- *SOLVED* When clicking the back button the results shown were always for the first page of results regardless of which page was supposed to be presented, this was due to the session storage value for page number being reset to one when the game information page was opened.
+
+- Occasionally one of the random games doesn't load leaving an empty space, a fix will be provided in a further update.
 
 # Scalability
 

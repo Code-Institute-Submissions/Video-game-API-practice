@@ -24,11 +24,11 @@ $(document).ready(() => {
 function getGames(searchText) {
 
 	page = 1;
-    sessionStorage.setItem("page", "1");
+	sessionStorage.setItem("page", "1");
 
-    // hides the image slider when the search function is performed
-    
-    document.getElementById('sliderSection').style.display = 'none';
+	// hides the image slider when the search function is used
+
+	document.getElementById('sliderSection').style.display = 'none';
 
 	const settings = {
 		"async": true,
@@ -59,6 +59,16 @@ function getGames(searchText) {
 			let output = '';
 			$.each(gamesResults, (key, game) => {
 				let image = `<img class="thumbnails" src="${game.background_image}">`;
+
+				// replaces image with default if none exist
+
+				if (game.background_image == null) {
+					console.log("first" + image)
+					image = `<img class="thumbnails" src="/assets/images/VGsearch.png">`;
+					console.log("first" + image)
+				};
+
+
 				output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
@@ -70,10 +80,6 @@ function getGames(searchText) {
             </div>`
 				document.getElementById("gamediv").innerHTML = output;
 
-
-				if (game.background_image == null) {
-					image = `<img class="thumbnails" src="assets/images/VGsearch.png">`;
-				};
 			});
 		})
 
