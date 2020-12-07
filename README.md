@@ -16,6 +16,16 @@
 
 Website has been deployed to [GitHub Pages](https://joshhunt1991.github.io/Video-game-API-practice/index.html).
 
+The deployment process is shown below:
+
+[- Log in to github](/readmelinks/login.png) <br/>
+[- Open the repo](/readmelinks/selectrepo.png) <br/>
+[- Scroll down to github pages](/readmelinks/gitpages.png) <br/>
+[- Select master branch](/readmelinks/master.png) <br/>
+- This will generate a live page for your repo.
+
+
+
 # Wireframe
 
 The wireframe was designed using [Balsamiq](https://balsamiq.com/wireframes/) and links to the final version can be found below:
