@@ -24,7 +24,11 @@ $(document).ready(() => {
 function getGames(searchText) {
 
 	page = 1;
-	sessionStorage.setItem("page", "1");
+    sessionStorage.setItem("page", "1");
+
+    // hides the image slider when the search function is performed
+    
+    document.getElementById('sliderSection').style.display = 'none';
 
 	const settings = {
 		"async": true,
@@ -109,12 +113,6 @@ $(".next-btn").on("click", function () {
 		document.getElementById("page-number-bottom").innerHTML = `<p>${page}</p>`;
 	}
 });
-
-// hides the image slider on index.html when a search is performed
-
-function sliderHide() {
-	document.getElementById('sliderSection').style.display = 'none'
-}
 
 
 // function for changing pages
