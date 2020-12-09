@@ -118,6 +118,8 @@ Once the site was deployed on github pages I repeated all the previous tests to 
 
 [- I also tested that the about page opened as function as this page is crucial to achieving the goal of user stories (2)](/readmelinks/usabout.png) <br/>
 
+[- There is one final issue I discovered during testing, an error message showing in the console that only shows up on my computer and nobody elses as far as I can tell. It doesn't seem to be a problem as it appears to only show for me](/readmelinks/typeerror.png) <br/>
+
 # Validation and code clean up
 
 - I used W3C mark up validation service to validate my code [W3C Markup Validator](https://validator.w3.org/) <br/>
