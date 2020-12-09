@@ -428,7 +428,9 @@ function reloadGames() {
 function randomGames() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+    let randomNumber2 = Math.floor(Math.random() * 19) + 1;
+    console.log(randomNumber);
+    console.log(randomNumber2);
 	const settings = {
 		"async": true,
 		"crossDomain": true,
@@ -473,7 +475,7 @@ function randomGames() {
 function randomGames2() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
 	console.log(randomNumber);
 	const settings = {
 		"async": true,
@@ -515,7 +517,7 @@ function randomGames2() {
 function randomGames3() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
 	console.log(randomNumber);
 	const settings = {
 		"async": true,
@@ -557,7 +559,7 @@ function randomGames3() {
 function randomGames4() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
 	const settings = {
 		"async": true,
 		"crossDomain": true,
@@ -599,7 +601,7 @@ function randomGames4() {
 function randomGames5() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
 	console.log(randomNumber);
 	const settings = {
 		"async": true,
@@ -640,7 +642,7 @@ function randomGames5() {
 
 function randomGames6() {
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-	let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
 	console.log(randomNumber);
 	const settings = {
 		"async": true,
