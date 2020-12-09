@@ -64,7 +64,7 @@ function getGames(searchText) {
 
 				if (game.background_image == null) {
 					console.log("first" + image)
-					image = `<img class="thumbnails" src="/assets/images/VGsearch.png">`;
+					image = `<img class="thumbnails" src="assets/images/VGsearch.png">`;
 					console.log("first" + image)
 				};
 
