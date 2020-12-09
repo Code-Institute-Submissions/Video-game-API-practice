@@ -78,15 +78,15 @@ Below are some images demonstrating the responsiveness of the webpage on differe
 
 Users:
 
-- As a user, I'd like to find good quality games that are highly rated, to achieve this I only selected the random games from a pool of the top 2000 most highly rated games. I also give the user ratings and a visual guide of quality in the form of a chart for any and all games where the information is avaiable
-- As a user, I'd like to get a clear sense of what the website is meant to achieve. This was accomplished by creating an "about" page with information about the purpose of the page and also having clear headers and calls to action where necessary.
-- As a user, I'd like to be able to search for game series by keyword. To satisfy this requirement I created a search function that allows users to search by keyword.
-- As a user, I'd like to quickly find highly rated and popular games at random. I achieved this by implementing a randon game page that returns 6 random games from the top 2000 rated games each time the random button is clicked.
+- (1) As a user, I'd like to find good quality games that are highly rated, to achieve this I only selected the random games from a pool of the top 2000 most highly rated games. I also give the user ratings and a visual guide of quality in the form of a chart for any and all games where the information is avaiable
+- (2) As a user, I'd like to get a clear sense of what the website is meant to achieve. This was accomplished by creating an "about" page with information about the purpose of the page and also having clear headers and calls to action where necessary.
+- (3) As a user, I'd like to be able to search for game series by keyword. To satisfy this requirement I created a search function that allows users to search by keyword.
+- (4) As a user, I'd like to quickly find highly rated and popular games at random. I achieved this by implementing a randon game page that returns 6 random games from the top 2000 rated games each time the random button is clicked.
 
 Site creator:
 
-- I would like my users to find the site easy to use to retain their interest so I focused on creating a simple, straightforward and self explanatory user interface.
-- I would like the theme to clearly represent gaming therefore I used a retro style theme inspired by space invaders and the original Xbox color scheme. I used colour contrast to make everything stand out.
+- (5) I would like my users to find the site easy to use to retain their interest so I focused on creating a simple, straightforward and self explanatory user interface.
+- (6) I would like the theme to clearly represent gaming therefore I used a retro style theme inspired by space invaders and the original Xbox color scheme. I used colour contrast to make everything stand out.
 
 # Testing
 
@@ -100,13 +100,23 @@ Website has been tested using [GTmetrix](https://gtmetrix.com/reports/joshhunt19
 
 I did a simple functionality test to ensure that the website works as intended and evidenced this process below. I was satisfied with the results.
 
-[- First I performed a search using the homepage search bar for the game Super Mario](/readmelinks/smario.png) <br/>
+[- First I performed a search using the homepage search bar for the game Super Mario which was the goal of user stories (3)](/readmelinks/smario.png) <br/>
 [- Then I tested the next and previous buttons, starting with previous to ensure that as I am starting on page 1 nothing happens. I arrived on page 3](/readmelinks/pagebuttons.png) <br/>
 [- Then I clicked on one of these games to bring myself to the game details page](/readmelinks/gamepage.png) <br/>
 [- I then used the back button to ensure that I returned to the same page I was previously on](/readmelinks/backbutton.png) <br/>
 [- I then performed a second game search to ensure that nothing was broken by performing the previous actions](/readmelinks/secondsearch.png) <br/>
 
 [- Once these initial checks were done I searched for a nonsense string to test my error message](/readmelinks/nonsense.png) <br/>
+
+Next I performed multiple refreshes of the random games page to ensure that I was consistently returning highly rated games as desired in user stories (1) and (4).
+
+[- attempt 1](/readmelinks/attempt1.png) <br/>
+[- attempt 2](/readmelinks/attempt2.png) <br/>
+[- attempt 3](/readmelinks/attempt3.png) <br/>
+
+Once the site was deployed on github pages I repeated all the previous tests to ensure that everything was still function.
+
+[- I also tested that the about page opened as function as this page is crucial to achieving the goal of user stories (2)](/readmelinks/usabout.png) <br/>
 
 # Validation and code clean up
 
@@ -125,7 +135,7 @@ I did a simple functionality test to ensure that the website works as intended a
 
 - *SOLVED* When clicking the back button the results shown were always for the first page of results regardless of which page was supposed to be presented, this was due to the session storage value for page number being reset to one when the game information page was opened.
 
-- Occasionally one of the random games doesn't load leaving an empty space, a fix will be provided in a further update.
+- *SOLVED* Occasionally one of the random games wasn't loading, leaving an empty space, this was due to my randomly generated number for the random game function exceeding the number of games on the API's pages.
 
 # Scalability
 
