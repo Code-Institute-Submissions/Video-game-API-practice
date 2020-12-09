@@ -157,7 +157,7 @@ I have used different resources for the API images and my logo, I'll list all be
 - [Pexels](https://unsplash.com/s/photos/video-game) for the slider images on the index.html page and the image on the about page.
 - [Font Awesome](https://fontawesome.com/6?next=%2Fstart) for the magnifying glass on the search bar
 - [Rapid API](https://rapidapi.com/accujazz/api/rawg-video-games-database/) I used the RawG video games database API which is hosted on Rapid API.
-
+- [favicon.io](https://favicon.io/favicon-generator/) for the favicon
 
 # Thanks to
 
