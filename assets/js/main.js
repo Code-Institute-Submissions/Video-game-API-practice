@@ -146,27 +146,40 @@ function changePage(page, searchText) {
 				let games = response;
 				let gamesResults = games.results;
 
-				// output for changed page
+				// output for gamediv
 
 				let output = '';
 				$.each(gamesResults, (key, game) => {
+					let image = `<img class="thumbnails" src="${game.background_image}">`;
+
+					// replaces image with default if none exist
+
+					if (game.background_image == null) {
+						console.log("first" + image)
+						image = `<img class="thumbnails" src="/assets/images/VGsearch.png">`;
+						console.log("first" + image)
+					};
+
+
 					output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
-                    <img class="thumbnails" src="${game.background_image}">
+                    ${image}
                     <h5>${game.name}</h5>
                     <p>Metacritic score - ${game.metacritic}</p>
                     <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
                 </div>
             </div>`
 					document.getElementById("gamediv").innerHTML = output;
+
 				});
 			})
-
 
 			.catch((err) => {
 				console.log(err);
 			});
+
+
 	} else {
 		const settings = {
 			"async": true,
@@ -184,23 +197,34 @@ function changePage(page, searchText) {
 				let games = response;
 				let gamesResults = games.results;
 
-				// output for changed page
+				// output for gamediv
 
 				let output = '';
 				$.each(gamesResults, (key, game) => {
+					let image = `<img class="thumbnails" src="${game.background_image}">`;
+
+					// replaces image with default if none exist
+
+					if (game.background_image == null) {
+						console.log("first" + image)
+						image = `<img class="thumbnails" src="/assets/images/VGsearch.png">`;
+						console.log("first" + image)
+					};
+
+
 					output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
-                    <img class="thumbnails" src="${game.background_image}">
+                    ${image}
                     <h5>${game.name}</h5>
                     <p>Metacritic score - ${game.metacritic}</p>
                     <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
                 </div>
             </div>`
 					document.getElementById("gamediv").innerHTML = output;
+
 				});
 			})
-
 
 			.catch((err) => {
 				console.log(err);
@@ -391,16 +415,28 @@ function reloadGames() {
 
 				let output = '';
 				$.each(gamesResults, (key, game) => {
+					let image = `<img class="thumbnails" src="${game.background_image}">`;
+
+					// replaces image with default if none exist
+
+					if (game.background_image == null) {
+						console.log("first" + image)
+						image = `<img class="thumbnails" src="/assets/images/VGsearch.png">`;
+						console.log("first" + image)
+					};
+
+
 					output += `
             <div class="col-lg-4 col-md-6 no-padding">
                 <div class="text-center">
-                    <img class="thumbnails" src="${game.background_image}">
+                    ${image}
                     <h5>${game.name}</h5>
                     <p>Metacritic score - ${game.metacritic}</p>
                     <a onclick="gameSelected('${game.id}')" class="btn btn-success detail-btn href="#">Game Details</a>
                 </div>
             </div>`
 					document.getElementById("gamediv").innerHTML = output;
+
 				});
 			})
 
@@ -428,9 +464,9 @@ function reloadGames() {
 function randomGames() {
 
 	let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let randomNumber2 = Math.floor(Math.random() * 19) + 1;
-    console.log(randomNumber);
-    console.log(randomNumber2);
+	let randomNumber2 = Math.floor(Math.random() * 19) + 1;
+	console.log(randomNumber);
+	console.log(randomNumber2);
 	const settings = {
 		"async": true,
 		"crossDomain": true,
